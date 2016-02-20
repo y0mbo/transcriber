@@ -1,0 +1,30 @@
+body {
+  padding: 10px;
+}
+#audioPlayer{
+  margin: 50px auto auto auto;
+}
+#playhead {
+  background-color: rgb(50,118,177);
+  border-radius: 50%; 
+  height: 18px;
+  margin-top: 1px;
+  width: 18px;
+}
+#player {
+  float: left;
+}
+#playPause {
+  width: 75px;
+}
+.timespan {
+  float: left;
+  padding: 0 5px;
+}
+#timeline {
+  background-color: rgb(221,221,221);
+  border-radius: 15px;
+  float: left;
+  height: 20px;
+  width: 400px;
+}
