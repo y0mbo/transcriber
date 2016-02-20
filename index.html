@@ -6,13 +6,20 @@
   <meta name="description" content="Transcription utility">
   <meta name="author" content="John Uhri, Red Bit Blue Bit, LLC">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ghostdown.css">
 
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="js/ghostdown.js"></script>
+  <script src="js/jquery.ghostdown.js"></script>
+
 </head>
 <body>
 <audio id="audioFile"> 
@@ -34,11 +41,36 @@
   <button id="timestamp" class="btn btn-sm" onclick="insertTimestamp();" title="Insert Time Stamp"><span class="glyphicon glyphicon-time"></span> Timestamp</button>
 
 </div>
-<div>
-  <textarea id="editor" placeholder="Start Typing...">
-  </textarea>
-  </div>
+<style>
+  .entry-markdown-content {
+    float: left;
+    width: 50%;
+}
+.entry-preview-content {
+}
+</style>
+    <section class="editor">
+      <div class="outer">
+        <div class="editorwrap">
+          <section class="entry-markdown">
+            <header class="floatingheader">Markdown</header>
+            <section class="entry-markdown-content">
+              <textarea id="editor" class="editor"></textarea>
+                <section class="entry-preview active">
+                <header class="floatingheader"> Preview <span class="entry-word-count">0 words</span></header>
+                  <section class="entry-preview-content">
+                  <div class="rendered-markdown"></div>
+                  </section>
+                </section>
+        </div>
+      </div>
+    </section>
   <script src="js/scripts.js"></script>
+  <script>
+    $(document).ready(function () {
+        $(".editor").ghostDown();
+    });
+  </script>
 <body>
 </html>
 
