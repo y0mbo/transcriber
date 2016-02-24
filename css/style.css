@@ -28,3 +28,9 @@ body {
   height: 20px;
   width: 400px;
 }
+
+.CodeMirror-code {
+  background-color: #eee;
+}
+.cm-s-default .cm-header {
+}
